@@ -2,3 +2,4 @@ tmp/
 generators/output
 services/*/config/
 Preferences.xml
+traefik_linux-amd64
