@@ -1,4 +1,4 @@
 tmp/
 generators/output
-services/plex/config/
+services/*/config/
 Preferences.xml
