@@ -1,5 +1,5 @@
 #!/bin/bash
-eval $(docker-machine env --shell bash octoblu-dev)
+
 . ./servers
 
 DOCKER_RUN='docker run --name $SERVER -d'

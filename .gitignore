@@ -1,5 +1,3 @@
 tmp/
 generators/output
-services/*-private.env
-meshblu.json
-init/traefik/traefik.toml
+services/plex/config/

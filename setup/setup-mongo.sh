@@ -1,5 +1,5 @@
 #!/bin/bash
-eval $(docker-machine env --shell bash octoblu-dev)
+
 
 if [[ -z "$1" ]]; then
   echo "must provide a mongo container to connect to"
