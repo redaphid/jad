@@ -4,11 +4,15 @@ sudo cp ./config/ufw /etc/default/ufw
 sudo ufw reload
 sudo ufw allow 2375/tcp
 
+sudo cp ./config/NetworkManager.conf /etc/NetworkManager/
+sudo killall dnsmasq
+sudo service network-manager restart
+
 PLEX_CONFIG_LOCATION="config/Library/Application Support/Plex Media Server/"
 (
   cd services/plex;
   sudo rm -rf config/*;
-  ./plex-decrypt.sh;  
+  ./plex-decrypt.sh;
 )
 #
 # brew install docker-machine
