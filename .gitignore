@@ -1,3 +1,4 @@
 tmp/
 generators/output
 services/plex/config/
+Preferences.xml

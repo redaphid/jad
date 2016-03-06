@@ -3,7 +3,13 @@ sudo usermod -aG docker redaphid
 sudo cp ./config/ufw /etc/default/ufw
 sudo ufw reload
 sudo ufw allow 2375/tcp
-(cd services/plex; ./plex-decrypt.sh; mv ./plex-preferences.xml ./config)
+
+PLEX_CONFIG_LOCATION="config/Library/Application Support/Plex Media Server/"
+(
+  cd services/plex;
+  sudo rm -rf config/*;
+  ./plex-decrypt.sh;  
+)
 #
 # brew install docker-machine
 # brew link --overwrite docker

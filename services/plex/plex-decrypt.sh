@@ -1,2 +1,2 @@
 #!/bin/sh
-openssl enc -d -aes-256-cbc -salt -in plex-preferences.xml.enc -out plex-preferences.xml
+openssl enc -d -aes-256-cbc -salt -in Preferences.xml.enc -out Preferences.xml
