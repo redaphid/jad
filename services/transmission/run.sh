@@ -8,4 +8,4 @@ docker run \
     -v $HOME/Downloads:/downloads \
     -v $HOME/media:/done \
     -p 9091 \
-    redaphid/transmission:latest
+    redaphid/docker-transmission:latest
