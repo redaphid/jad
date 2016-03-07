@@ -6,5 +6,6 @@ docker run \
     --net="host" \
     --restart="always" \
     -p 67:67/udp \
+    -d \
     -v $PWD/config:/data \
-    jkoelker/isc-dhcpd:latest
+    networkboot/dhcpd:latest
