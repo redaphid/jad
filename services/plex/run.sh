@@ -7,9 +7,11 @@ cp ./Preferences.xml "$PLEX_CONFIG_LOCATION"
 
 docker rm -f plex
 docker run --restart="always" \
-  -d --name plex \
+  --net="host" \
+  -d \
+  --name plex \
   -v $PWD/config:/config \
-  -v /home/redaphid/media:/media/movies \
-  -v /home/redaphid/Videos:/media/tv \
+  -v /mnt/data/movies:/media/movies \
+  -v /mnt/data/tv:/media/tv \
   -p 32400:32400 \
   timhaak/plexpass
