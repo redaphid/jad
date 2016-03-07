@@ -4,7 +4,7 @@ cp settings.json config/
 docker run \
     --name transmission \
     --restart="always" \
-    --net="host"
+    --net="host" \
     -v $PWD/config:/config \
     -v $MEDIA_LOCAL_DIRECTORY/downloads:/downloads \
     -v $MEDIA_LOCAL_DIRECTORY/incoming:/done \
