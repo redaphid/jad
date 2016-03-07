@@ -7,5 +7,5 @@ docker run \
     -v $PWD/config:/config \
     -v $MEDIA_LOCAL_DIRECTORY/downloads:/downloads \
     -v $MEDIA_LOCAL_DIRECTORY/incoming:/done \
-    -p 9091 \
+    -d \
     redaphid/docker-transmission:latest
