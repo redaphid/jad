@@ -11,7 +11,7 @@ docker run --restart="always" \
   -d \
   --name plex \
   -v $PWD/config:/config \
-  -v /mnt/data/movies:/media/movies \
-  -v /mnt/data/tv:/media/tv \
+  -v /mnt/data/plex/movies:/media/movies \
+  -v /mnt/data/plex/tv:/media/tv \
   -p 32400:32400 \
   timhaak/plexpass
