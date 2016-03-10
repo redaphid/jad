@@ -1,12 +1,22 @@
 #!/bin/sh
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo echo "deb https://apt.dockerproject.org/repo ubuntu-wily main" > /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+sudo apt-get install docker-engine -y
 sudo usermod -aG docker redaphid
-sudo cp ./config/ufw /etc/default/ufw
-sudo ufw reload
-sudo ufw allow 2375/tcp
+sudo service docker start
 
-sudo cp ./config/NetworkManager.conf /etc/NetworkManager/
-sudo killall dnsmasq
-sudo service network-manager restart
+sudo cp logind.conf /etc/systemd/
+sudo service systemd-logind restart
+
+sudo apt-get install usbmount
+# sudo cp ./config/ufw /etc/default/ufw
+# sudo ufw reload
+# sudo ufw allow 2375/tcp
+#
+# sudo cp ./config/NetworkManager.conf /etc/NetworkManager/
+# sudo killall dnsmasq
+# sudo service network-manager restart
 
 PLEX_CONFIG_LOCATION="config/Library/Application Support/Plex Media Server/"
 (
