@@ -3,11 +3,9 @@ user=root
 listen-address={{IP}},127.0.0.1
 server=8.8.8.8
 dns-forward-max=4096
-max-cache-ttl=1
-neg-ttl=1
 
 dhcp-range=10.0.1.50,10.0.1.255
-
+dhcp-authoritative
 dhcp-option=3,10.0.0.2
 dhcp-option=6,10.0.0.1
 
@@ -16,3 +14,4 @@ enable-tftp
 tftp-root=/pxe
 
 log-dhcp
+log-queries
