@@ -12,6 +12,3 @@ dhcp-option=6,10.0.0.1
 dhcp-boot=pxelinux.0
 enable-tftp
 tftp-root=/pxe
-
-log-dhcp
-log-queries
