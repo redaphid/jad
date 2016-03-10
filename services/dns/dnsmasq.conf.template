@@ -2,6 +2,8 @@ address=/jad/{{IP}}
 user=root
 listen-address={{IP}},127.0.0.1
 server=8.8.8.8
+domain-needed
+domain=jad
 dns-forward-max=4096
 
 dhcp-range=10.0.1.1,10.0.1.255

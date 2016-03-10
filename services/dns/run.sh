@@ -3,6 +3,7 @@ sudo ip addr add 10.0.0.1/16 dev enx3c18a0400871
 docker rm -f dns
 sudo ./setup-conf.sh
 docker run \
+    --privileged \
     --name dns \
     --net="host" \
     --restart="always" \
