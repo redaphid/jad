@@ -1,3 +1,0 @@
-{{#each env}}
-{{{name}}}={{{value}}}
-{{/each}}
