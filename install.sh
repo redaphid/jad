@@ -4,7 +4,7 @@ sudo echo "deb https://apt.dockerproject.org/repo ubuntu-wily main" > /etc/apt/s
 sudo apt-get update
 sudo apt-get install docker-engine -y
 sudo usermod -aG docker redaphid
-
+sudo apt-get install avahi-daemon -y
 sudo service docker start
 
 sudo cp logind.conf /etc/systemd/

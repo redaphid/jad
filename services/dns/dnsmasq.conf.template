@@ -1,19 +1,28 @@
 address=/jad/{{IP}}
-user=root
-listen-address={{IP}},127.0.0.1
-server=8.8.8.8
-local=/robot/
-domain=robot
-dns-forward-max=4096
+server=/local/8.8.8.8
 
-dhcp-range=10.0.1.1,10.0.1.255
+user=root
+server=8.8.8.8
+dns-forward-max=4096
+domain=lan
+local=/lan/
+domain-needed
+expand-hosts
+bogus-priv
+no-negcache
+no-hosts
+localise-queries
+
+dhcp-leasefile=/etc/dnsmasq.leases
 dhcp-authoritative
-dhcp-option=3,10.0.0.1
-dhcp-option=6,10.0.0.1
+dhcp-range=10.0.1.1,10.0.1.255
+dhcp-option=3,10.0.0.2
+dhcp-option=6,0.0.0.0
 
 dhcp-boot=pxelinux.0
 enable-tftp
 tftp-root=/pxe
+#log-queries
+#log-dhcp
 
-log-queries
-log-dhcp
+
