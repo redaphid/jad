@@ -8,3 +8,4 @@ fi
 
 tar -zxf netboot.tar.gz
 cp ../../grub.cfg .
+chmod -R oug+r .
