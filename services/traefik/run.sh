@@ -1,6 +1,7 @@
 #!/bin/bash
 echo + Træfɪk
 docker run \
+  --restart="always" \
   --name traefik \
   --net="host" \
   -v $PWD/traefik.toml:/traefik.toml \
