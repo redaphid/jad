@@ -25,4 +25,9 @@ tftp-root=/pxe
 #log-queries
 #log-dhcp
 
+#leases
+
+#chromecast
+dhcp-host=d0:e7:82:d5:68:55,10.0.0.100
+dhcp-host=00:17:88:27:63:67,10.0.0.101
 
