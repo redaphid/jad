@@ -18,6 +18,7 @@ docker run \
     -p 67:67/udp \
     -p 8080:8080 \
     -v $PWD/config/dnsmasq.conf:/etc/dnsmasq.conf \
+    -v $PWD/config/dnsmasq-hosts.conf:/etc/dnsmasq-hosts.conf \
     -v $PWD/config/pxe:/pxe \
     quay.io/jpillora/dnsmasq-gui:latest
 
