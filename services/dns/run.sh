@@ -13,9 +13,9 @@ docker run \
     --net="host" \
     --privileged \
     --restart="always" \
-    -d \
     -p 53:53/udp \
     -p 67:67/udp \
+    -d \
     -p 8080:8080 \
     -v $PWD/config/dnsmasq.conf:/etc/dnsmasq.conf \
     -v $PWD/config/dnsmasq-hosts.conf:/etc/dnsmasq-hosts.conf \
