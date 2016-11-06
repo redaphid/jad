@@ -6,6 +6,8 @@ mkdir -p "$PLEX_CONFIG_LOCATION";
 rm "$PLEX_CONFIG_LOCATION/Preferences.xml"
 cp ./Preferences.xml "$PLEX_CONFIG_LOCATION"
 
+docker pull timhaak/plexpass:latest
+
 docker rm -f plex
 docker run --restart="always" \
   --net="host" \
@@ -13,4 +15,4 @@ docker run --restart="always" \
   -d \
   -v $PWD/config:/config \
   -v $MEDIA_LOCAL_DIRECTORY:/media \
-  timhaak/plexpass
+  timhaak/plexpass:latest
